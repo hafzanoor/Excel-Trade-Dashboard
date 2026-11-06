@@ -1,35 +1,42 @@
-**Overview**
-The Trading Dashboard is an Excel-based tool designed to help traders log, analyze, and visualize their trading performance in a structured and data-driven way.
-It transforms raw trade records into interactive charts and performance summaries, making it easier to identify strengths, weaknesses, and patterns in trading behavior.
+# Trading Performance Dashboard (Excel)
 
-Whether you’re a beginner or an experienced retail trader, this dashboard provides a clean, visual approach to track progress and improve decision-making.
+An interactive Excel dashboard that turns a trade journal into performance analytics: equity growth,
+profit and loss by month, instrument, time frame and direction, win/loss ratio, and progress toward a
+monthly target. Built as a freelance analytics project.
 
-Dashboard	-- The main visual interface summarizing all key trading metrics with charts.
-My_Journal --	A structured log for recording trade details (date, instrument, entry, exit, profit/loss).
-Chart_Data --	Data source feeding charts for visualization.
-Working --	Contains formulas, intermediate calculations, and data transformations.
-List Variable	-- Dropdown lists and lookup data for easy input consistency.
+![Dashboard preview](dashboard.png)
 
-**Performance**
+## What it does
+- **Trade journal:** one row per trade (date, instrument, position size, time frame, direction, entry,
+  stop loss, take profit, exit, commission). Risk/reward, net P&L, P&L %, running balance and month-end
+  equity are calculated automatically.
+- **Dashboard:** 13 linked charts built on 10 pivot tables, including end-month equity, an equity curve,
+  P&L by time frame, P&L by currency pair, P&L by direction, and doughnut KPI gauges for win rate and
+  target progress.
+- **Interactive filtering:** slicers for trade month, currency pair and date update every chart at once.
+- **Target tracking:** compares current equity with the monthly profit target and the trading days remaining.
 
-Performance Tracking → Visualize profit/loss over time
+## Workbook structure
+| Sheet | Purpose |
+|---|---|
+| `Dashboard` | Main visual summary: KPI cards, charts and slicers |
+| `My_Journal` | Trade log where new trades are entered |
+| `Chart_Data` | Pivot tables that feed the charts |
+| `Working` | Intermediate calculations: targets, capacity and KPI formulas |
+| `List Variable` | Drop-down lists (instruments, signals, time frames, directions) for consistent data entry |
 
-Trade Journal → Record and organize trading history
+## How to use
+1. Download `Trading-DashBoard.xlsx` and open it in Microsoft Excel 2016 or later (slicers need a recent version).
+2. Add trades in `My_Journal` using the drop-down lists.
+3. Go to **Data → Refresh All** to update the pivot tables and charts.
+4. Use the slicers on `Dashboard` to filter by month, instrument or date.
 
-Interactive Charts → Quick insights into trends & performance
+## Skills demonstrated
+Data modeling in Excel · Pivot tables and pivot charts · Slicers · Calculated KPIs · Data validation ·
+Dashboard design for non-technical users
 
-Data-Driven Insights → Identify winning strategies and mistakes
+## Tools
+Microsoft Excel (formulas, pivot tables, pivot charts, slicers, data validation)
 
-User-Friendly Layout → Designed for ease of use and customization
-
-**How can you use it?**
-
-Download or clone this repository.
-
-Open the Trading-DashBoard.xlsx file in Microsoft Excel.
-
-Go to My_Journal to log your trades.
-
-The Dashboard updates automatically with charts and metrics based on your entries.
-
-Keep your Chart_Data sheet updated for accurate analytics.
+---
+Author: [Hafza Noor](https://github.com/hafzanoor)
